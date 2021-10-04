@@ -13,25 +13,27 @@
   <section>
 
     <div class="header">
-      <div class="devfinder">
+      <div id="devfinder" class="devfinder">
         <h1>devfinder</h1>
       </div>   
 
-      <div class="light">
-        <button class="sun">LIGHT</button><i class="sun-icon"><img src="./assets/icon-sun.svg" alt=""></i>
-        <button class="moon">DARK</button><i class="moon-icon"><img src="./assets/icon-moon.svg" alt=""></i>
+      <div class="btn-color">
+        <button id="light" class="sun" type="submit">LIGHT</button><i class="sun-icon"><img src="./assets/icon-sun.svg" alt=""></i>
+        <button id="dark" class="moon" type="submit" onclick="changeColor">DARK</button><i class="moon-icon"><img src="./assets/icon-moon.svg" alt=""></i>
       </div>
     </div>
 
+    <form id="search-form">
+      <div id="c2" class="search-field">
+        <input id="search-name" type="text" placeholder="Search GitHub username...">
+        <i class="search-icon"><img src="./assets/icon-search.svg" alt=""></i>
+        <button type="submit" value="submit">Search</button> 
+      </div>
+    </form>
+    
 
-    <div class="search-field">
-      <input type="text" placeholder="Search GitHub username...">
-      <i class="search-icon"><img src="./assets/icon-search.svg" alt=""></i>
-      <button type="submit" value="submit">Search</button> 
-    </div>
 
-
-    <div class="box">
+    <div id="c2" class="box">
       <div class="profil-card">
         <div class="photo">
           <img src="./assets/mau.png" alt="">
@@ -39,53 +41,55 @@
 
         <div class="text">
           <div class="profil-base">
-            <div class="name">
-              <h1>The Octocat</h1>
-              <h3>@octocat</h3>
+            <div id="c3" class="name">
+              <h1 class="username">No Name</h1>
+              <h3>@noname</h3>
             </div>
-            <div class="date">
-              <h2>Joined 25 Jan 2011</h2>
+            <div id="c3" class="date">
+              <h2>Joined -- --- ----</h2>
             </div>
-          </div>
-            
-          <div class="profil-text">
-            <h2>This profile has no bio</h2>
           </div>
         </div>
+          <div id="c3" class="profil-text">
+            <h2>This profile has no bio</h2>
+          </div>
+        
       </div>
         
       <div class="data-card">
-        <div class="numbers">
-          <div class="repos">
+        <div id="c1" class="numbers">
+          <div id="c3" class="repos">
             <p>Repos</p><br>
-            <p class="p1">8</p>
+            <p class="p1">--</p>
           </div>
 
-          <div class="followers">
+          <div id="c3" class="followers">
             <p>Followers</p><br>
-            <p class="p1">3938</p>
+            <p class="p1">--</p>
           </div>
 
-          <div class="following">
+          <div id="c3" class="following">
             <p>Following</p><br>
-            <p class="p1">9</p>
+            <p class="p1">--</p>
           </div>
         </div>
 
-        <div class="links">
+        <div id="c3" class="links">
           <div class="left-links">
-            <i><img src="./assets/icon-location.svg" alt="">  San Francisco</i>
-            <i><img src="./assets/icon-website.svg" alt="">  https://github.blog</i>
+            <i><img src="./assets/icon-location.svg" alt="">  Not Available</i>
+            <i><img src="./assets/icon-website.svg" alt="">  Not Available</i>
           </div>
 
           <div class="right-links">
             <i><img src="./assets/icon-twitter.svg" alt="">  Not Available</i>
-            <i><img src="./assets/icon-company.svg" alt="">  @github</i>
+            <i><img src="./assets/icon-company.svg" alt="">  Not Available</i>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script src="w5-script.js"></script>
 
 </body>
 </html>

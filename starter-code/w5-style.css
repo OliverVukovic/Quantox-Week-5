@@ -29,6 +29,10 @@ section {
     justify-content: space-between;
 }
 
+.btn-color {
+
+}
+
 .sun {
     border: none;
     background-color: #F6F8FF;
@@ -90,6 +94,7 @@ button {
     font-weight: 700;
     margin-left: -120px;
     border-radius: 15px;
+    border: none;
     cursor: pointer;
 }
 
@@ -100,42 +105,47 @@ button {
     border-radius: 15px;
     align-items: flex-end;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    width: 100%;
 }
 
 .profil-card {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    margin-top: 45px;
+    width: 100%;
 }
 
 .photo {
-    background-color: rgb(103, 209, 62);
-    width: 120px;
-    height: 120px;
+    border: 1px solid black;
+    width: 25%;
+    max-height: 120px;
     margin-left: 40px;
-    margin-right: 35px;
 }
 
 .profil-base {
     display: flex;
     flex-direction: row;
-    gap: 220px;
-    margin-right: 20px;
+    width: 100%;
 }
 
 .text {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 75%;
+    padding-left: 20px;
 }
 
 .name {
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 .date {
     align-items: flex-end;
+    width: 40%;
 }
 
 .profil-text {
@@ -147,7 +157,8 @@ button {
     flex-direction: column;
     align-items: flex-end;
     gap: 25px;
-    width: 480px;
+    max-width: 480px;
+    width: 75%;
     margin-right: 33px;
     margin-bottom: 35px;
 }
@@ -217,4 +228,176 @@ i {
     font-style: normal;
     color: #4B6A9B;
     line-height: 22px;
+}
+
+
+@media (max-width: 770px) {
+
+    section {
+        max-width: 730px;
+        width: auto;
+    }
+
+    .box {
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .profil-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .profil-base {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .text {
+        width: 65%;
+    }
+
+    .name {
+        width: 100%;
+    }
+
+    .date {
+        width: 100%;
+    }
+
+    .profil-text {
+        width: 100%;
+        padding-left: 40px;
+        padding-top: 40px;
+    }
+
+    .data-card {
+        width: auto;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .numbers {
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 375px) {
+    
+    section {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        height: 100%;
+    }
+
+    .header{
+        width: 100%;
+        height: 45px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    form {
+        width: 90%;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    input {
+        height: 60px;
+        font-size: 13px;
+    }
+
+    button {
+        width: 85px;
+        height: 50px;
+        font-size: 14px;
+        margin-left: -100px;
+    }
+
+    .box {
+        width: 90%;
+        margin: auto;
+    }
+
+    .profil-card {
+        margin-top: 30px;
+    }
+
+    .photo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 13px;
+    }
+
+    .profil-text {
+        padding-top: 30px;
+    }
+
+    .data-card {
+        width: 100%;
+        max-width: 280px;
+        max-height: 85px;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 50px;
+    }
+
+    .numbers {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .repos {
+        width: 27%;
+    }
+    .followers {
+        width: 35%;
+    }
+    .following {
+        width: 30%;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .left-links {
+        gap: 15px;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .right-links {
+        gap: 15px;
+        align-content: flex-start;
+        align-items: flex-start;
+    }
+
+    i {
+        font-size: 13px;
+    }
 }
