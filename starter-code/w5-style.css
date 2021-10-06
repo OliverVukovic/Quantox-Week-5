@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 
-:root {
+:root, :root.light {
     --colorbody: #F6F8FF;
     --colorbtn: #697c9a;
     --colorinput: #ffffff;
@@ -17,19 +17,23 @@
     --placeholdercolor: #4B6A9B;
     --colorimg: #4B6A9B  brightness(93%);            /*invert(41%) sepia(8%) saturate(2712%) hue-rotate(178deg) brightness(93%) contrast(86%); /
     */
+}
 
-   /* --colorbodyDark: #F6F8FF;
-    --colorinputDark: #ffffff;
-    --colorboxDark: #ffffff;
-    --colornumbersDark: #F6F8FF;
-    --colorh1Dark: #222731;
-    --colorh2Dark: #697c9a;
-    --coloriconDark: #9b9b9b;
-    --colorreposDark: #4B6A9B;
-    --colorfollowersDark: #4B6A9B;
-    --colorfollowingDark: #4B6A9B;
-    --colorp1Dark: #2B3442;
-    --placeholdercolorDark: #4B6A9B;*/
+root.dark {
+    --colorbody: #141d2f;
+    --colorbtn: #ffffff;
+    --colorinput: #1e2a47;
+    --colorbox: #1e2a47;
+    --colornumbers: #141d2f;
+    --colorh1: #ffffff;
+    --colorh2: #ffffff;
+    --coloricon: #ffffff;
+    --colorrepos: #ffffff;
+    --colorfollowers: #ffffff;
+    --colorfollowing: #ffffff;
+    --colorp1: #ffffff;
+    --placeholdercolor: #ffffff;
+    --colorimg: brightness(5);    
 }
 
 
@@ -69,7 +73,7 @@ section {
 .sun {
     border: none;
     background-color: var(--colorbody);
-    color: #697c9a;
+    color: #ffffff;
     font-size: 13px;
     font-weight: 700;
     text-align: center;
@@ -79,10 +83,15 @@ section {
     margin-right: 10px; 
     display: none;
 }
-.sun-icon {
-    margin-left: -30px;
-    display: none;
+
+.sun:hover {
+    background-color: var(--colorbody);
+    color: #697c9a;
 }
+
+/*.sun-icon {
+    onmouseover:gray;
+}*/
 
 .moon {
     border: none;
@@ -95,14 +104,24 @@ section {
     letter-spacing: 2.5px;
     cursor: pointer;
     margin-right: 10px;
+    outline: none;
 }
+
+.moon:hover {
+    background-color: var(--colorbody);
+    color: black;
+}
+
+/*
 .moon-icon {
-    margin-left: -30px;
-}
+    onmouseover:black;
+}*/
+
 
 .search-field {
     display: flex;
     flex-direction: row;
+    width: 100%;
     background-color: var(--colorinput);
     border-radius: 15px;
     align-items: center;
@@ -115,7 +134,7 @@ section {
 }
 
 input {
-
+    width: 70%;
     height: 70px;
     font-size: 18px;
     line-height: 25px;
@@ -124,13 +143,23 @@ input {
     border: none;
     padding-left: 50px;
     background-color: var(--colorinput);
+    outline: none;
 }
 
 ::placeholder {
     color: var(--placeholdercolor);
+    background-color: var(--colorinput);
     font-family: 'Space Mono';
     font-size: 18px;
     line-height: 25px;
+}
+
+.result-none {
+    color: red;
+    padding-right: 15px;
+    visibility: hidden;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 button {
@@ -141,7 +170,6 @@ button {
     font-size: 16px;
     line-height: 24px;
     font-weight: 700;
-    margin-left: 340px;
     border-radius: 15px;
     border: none;
     cursor: pointer;
@@ -169,17 +197,11 @@ button:hover {
     width: 100%;
 }
 
-.photo {
+.user-photo {
     border: 1px solid black;
     width: 25%;
     max-height: 120px;
     margin-left: 40px;
-}
-
-.profil-base {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
 }
 
 .text {
@@ -190,7 +212,13 @@ button:hover {
     padding-left: 20px;
 }
 
-.name {
+.profil-base {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.git-name {
     display: flex;
     flex-direction: column;
     width: 60%;

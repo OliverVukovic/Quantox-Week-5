@@ -18,71 +18,74 @@
       </div>   
 
       <div class="btn-color">
-        <input id="light" class="sun" placeholder="LIGHT" onclick="returnColor()"><i class="sun-icon"><img src="./assets/icon-sun.svg" alt=""></i>
-        <input id="dark" class="moon" placeholder="DARK" onclick="changeColor()"><i class="moon-icon"><img src="./assets/icon-moon.svg" alt=""></i>
+        <button id="light" class="sun" onclick="returnColor(); returnButton()">LIGHT <i class="sun-icon"><img src="./assets/icon-sun.svg" alt="sun"></i></button>
+        <button id="dark" class="moon" onclick="changeColor(); changeButton()">DARK <i class="moon-icon"><img src="./assets/icon-moon.svg" alt="moon"></i></button>
       </div>
     </div>
 
     <form id="search-form">
-      <div id="c2" class="search-field">
+      <div id="search-field" class="search-field">
         <input id="search-name" type="text" placeholder="Search GitHub username...">
-        <i class="search-icon"><img src="./assets/icon-search.svg" alt=""></i>
-        <button type="submit" value="submit">Search</button> 
+        <i class="search-icon"><img src="./assets/icon-search.svg" alt="icon"></i>
+        <p id="result-none" class="result-none">No results</p>
+        <button id="search-button" type="submit" value="submit">Search</button> 
       </div>
     </form>
     
 
 
-    <div id="c2" class="box">
+    <div id="box" class="box">
+
       <div class="profil-card">
-        <div class="photo">
-          <img src="./assets/mau.png" alt="">
+        <div id="profil-img" class="user-photo">
+          <img src="" alt="profil img">
         </div>
 
         <div class="text">
           <div class="profil-base">
-            <div id="c3" class="name">
-              <h1 class="username">No Name</h1>
-              <h3>@noname</h3>
+            <div id="git-name" class="git-name">
+              <h1 id="name" class="name">No Name</h1>
+              <h3 id="username" class="username">@noname</h3>
             </div>
-            <div id="c3" class="date">
+            <div id="date" class="date">
               <h2>Joined -- --- ----</h2>
             </div>
           </div>
         
-          <div id="c3" class="profil-text">
+          <div id="bio-text" class="bio-text">
             <h2>This profile has no bio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</h2>
           </div>
         </div>
       </div>
         
       <div class="data-card">
-        <div id="c1" class="numbers">
-          <div id="c3" class="repos">
+        
+        <div id="numbers" class="numbers">
+          <div id="repos" class="repos">
             <p>Repos</p><br>
             <p class="p1">--</p>
           </div>
 
-          <div id="c3" class="followers">
+          <div id="followers" class="followers">
             <p>Followers</p><br>
             <p class="p1">--</p>
           </div>
 
-          <div id="c3" class="following">
+          <div id="following" class="following">
             <p>Following</p><br>
             <p class="p1">--</p>
           </div>
         </div>
 
-        <div id="c3" class="links">
+        <div id="links" class="links">
           <div class="left-links">
-            <i><img src="./assets/icon-location.svg" alt="">  Not Available</i>
-            <i><img src="./assets/icon-website.svg" alt="">  Not Available</i>
+            <i><img src="./assets/icon-location.svg" id="img-location" class="location-image" alt="location-image"></i> <p id="location" class="info-location"></p>
+            <i><img src="./assets/icon-website.svg" id="img-website" class="website-image" alt="website-image"></i> <p id="website" class="info-website"></p>
           </div>
 
           <div class="right-links">
-            <i><img src="./assets/icon-twitter.svg" alt="">  Not Available</i>
-            <i><img src="./assets/icon-company.svg" alt="">  Not Available</i>
+            <i><img src="./assets/icon-twitter.svg" id="img-twitter" class="twitter-image" alt="twitter-image"></i> <p id="twitter" class="info-twitter"></p>
+            <i><img src="./assets/icon-company.svg" id="img-company" class="company-image" alt="company-image"></i> <p id="company" class="info-company"></p>
           </div>
         </div>
       </div>
