@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@import
+url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 
 .light-version {
@@ -15,8 +17,8 @@
     --colornumbers: #F6F8FF;
     --colordate: #697C9A;
     --colortext: #4B6A9B;
-    --colorimg: #4B6A9B  brightness(93%);            /*invert(41%) sepia(8%) saturate(2712%) hue-rotate(178deg) brightness(93%) contrast(86%); /
-    */
+    --colorimg: #4B6A9B  brightness(93%);       /*invert(41%) sepia(8%) saturate(2712%) hue-rotate(178deg) brightness(93%) contrast(86%); */
+    --bckimg: url("./assets/icon-moon.svg");
 }
 
 .dark-version {
@@ -35,10 +37,9 @@
     --placeholdercolor: #ffffff;
     --colordate: #ffffff;
     --colortext: #ffffff;
-    --colorimg: brightness(5);    
+    --colorimg: brightness(5);
+    --bckimg: url("./assets/icon-sun.svg");
 }
-
-
 
 
 * {
@@ -63,6 +64,7 @@ section {
     width: 730px;
     max-height: 590px;
     margin-top: 145px;
+    margin-bottom: 100px;
     font-family: 'Space Mono', monospace;
 }
 
@@ -71,14 +73,14 @@ section {
     flex-direction: row;
     justify-content: space-between;
 }
+
 /*
 .btn-color:hover {
     background: red;
     color: red;
-}*/
-
+}
 .sun {
-    border: 1px solid red;  /* none */
+    border: none;
     background-color: var(--colorbody);
     background-image: url("./assets/icon-sun.svg");
     background-repeat: no-repeat;
@@ -92,21 +94,19 @@ section {
     cursor: pointer;
     display: none;
 }
-
 .sun:hover {
     background-color: var(--colorbody);
     color: #697c9a;
     outline: none;
 }
-
 .sun-icon:hover {
     fill: #697c9a;
-}
+} */
 
 .moon {
     border: none;
     background-color: var(--colorbody);
-    background-image: url("./assets/icon-moon.svg");
+    background-image: var(--bckimg);
     background-repeat: no-repeat;
     background-position: 80px 15px;
     color: var(--colorbtn);
@@ -121,23 +121,24 @@ section {
 
 .moon:hover {
     background-color: var(--colorbody);
+    
     color: var(--hovercolor);
     outline: none;
-
+    fill: var(--hovercolor);
 }
 
-
+/*
 .moon-icon:hover {
     fill: black;
 }
-
+*/
 
 .search-field {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    background-color: var(--colorinput);  
+    background-color: var(--colorinput);
     border-radius: 15px;
     align-items: center;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
@@ -161,7 +162,7 @@ input {
     border-radius: 15px;
     border: none;
     padding-left: 50px;
-    background-color: var(--colorinput);    
+    background-color: var(--colorinput);
     color: var(--colorh1);
     outline: none;
 }
@@ -287,11 +288,13 @@ button:hover {
 .repos {
     color: var(--colortext);
 }
+
 .followers {
     color: var(--colortext);
 }
+
 .following {
-    color: var(--colortex);
+    color: var(--colortext);
 }
 
 .p1 {
@@ -301,13 +304,12 @@ button:hover {
     color: var(--colorp1);
 }
 
-
 .links {
     display: flex;
     flex-direction: row;
     width: 90%;
     margin-right: 40px;
-    gap: 15px;    
+    gap: 15px;
 }
 
 .left-links {
@@ -316,7 +318,6 @@ button:hover {
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-
 }
 
 .right-links {
@@ -377,7 +378,7 @@ p {
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
-    color: var(--coloricon);
+    color: var(--colortext);
     line-height: 22px;
     text-decoration: none;
 }
@@ -386,7 +387,7 @@ a {
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
-    color: var(--coloricon);
+    color: var(--colortext);
     line-height: 22px;
     text-decoration: none;
 }
@@ -398,7 +399,7 @@ i img {
 
 
 
-
+/* ----- response tablet ----- */
 
 @media (max-width: 770px) {
 
@@ -419,15 +420,18 @@ i img {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-    
+
     .profil-base {
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
     }
 
     .text {
-        width: 65%;
+        width: 60%;
     }
 
     .name {
@@ -438,43 +442,64 @@ i img {
         width: 100%;
     }
 
-    .profil-text {
+    .bio-text {
         width: 100%;
-        margin-left: -140px;
         padding-top: 40px;
+        margin-bottom: 25px;
+        margin-left: -150px;
     }
 
     .data-card {
-        width: auto;
+        width: 90%;
         justify-content: center;
         align-content: center;
         align-items: center;
+        margin: auto;
     }
 
     .numbers {
-        gap: 50px;
-        width: 90%;
+        gap: 70px;
+        width: 100%;
     }
 
     .links {
-        margin-left: 30px;
+        width: auto;
+        margin: 0px 10px;
+        gap: 0px;
+        padding-bottom: 25px;
+        justify-content: space-around;
+    }
+
+    .left-links {
+        gap: 0px;
+    }
+
+    .right-links {
+        gap: 0px;
+        width: auto;
     }
 }
 
 
-@media (max-width: 375px) {
-    
+/* ----- response mobitel ----- */
+
+
+@media (max-width: 425px) {
+
     section {
+        width: 95%;
+        max-width: 360px;
+        margin: auto;
         margin-top: 30px;
-        margin-bottom: 0px;
-        height: 100%;
+        height: 90%;
     }
 
     .header{
         width: 100%;
         height: 45px;
-        padding-left: 25px;
+        margin: auto;
         padding-right: 0px;
+        padding-left: 10px;
     }
 
     form {
@@ -495,6 +520,8 @@ i img {
         width: 75%;
         height: 60px;
         font-size: 13px;
+        padding-left: 40px;
+        line-height: 25px;
     }
 
     ::placeholder {
@@ -514,11 +541,14 @@ i img {
 
     .box {
         width: 90%;
+        height: 90%;
         margin: auto;
+        margin-bottom: 20px;
     }
 
     .profil-card {
         margin-top: 30px;
+        justify-content: center;
     }
 
     .user-photo {
@@ -527,7 +557,60 @@ i img {
         margin: auto;
     }
 
+    .text {
+        padding-left: 10px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
     .username {
+        font-size: 13px;
+    }
+
+    .date {
+        font-size: 13px;
+    }
+
+    .bio-text {
+        width: auto;
+        padding-top: 20px;
+        margin: auto;
+        margin-top: 0px;
+        font-size: 13px;
+        margin-left: -70px;
+    }
+
+    .data-card {
+        width: 100%;
+        max-width: 280px;
+        max-height: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .numbers {
+        justify-content: space-around;
+        gap: 5px;
+        width: 90%;
+        max-width: 280px;
+    }
+
+    .repos {
+        font-size: 11px;
+    }
+    
+    .followers {
+        font-size: 11px;;
+    }
+    
+    .following {
+        font-size: 11px;;
+    }
+
+    .p1 {
         font-size: 16px;
     }
 
@@ -539,58 +622,29 @@ i img {
         font-size: 13px;
     }
 
-    .profil-text {
-        width: auto;
-        padding-top: 20px;
-        margin-top: 0px;
-        margin-left: -100px;
-        margin-right: 25px;
-    }
-
-    .data-card {
-        width: 100%;
-        max-width: 280px;
-        max-height: 90%;
-        margin: auto;
-        margin-bottom: 30px;
-        margin-top: 50px;
-    }
-
-    .numbers {
-        font-size: 11px;
-        gap: 5px;
-    }
-
-    .repos {
-        width: 27%;
-    }
-    .followers {
-        width: 35%;
-    }
-    .following {
-        width: 30%;
+    p {
+        font-size: 13px;
+        line-height: 19px;
     }
 
     .links {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        margin-right: 40px;
         align-items: flex-start;
         align-content: flex-start;
     }
 
     .left-links {
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
         align-content: flex-start;
         align-items: flex-start;
     }
 
     .right-links {
-        gap: 15px;
+        flex-direction: column;
+        gap: 10px;
         align-content: flex-start;
         align-items: flex-start;
     }
-
-    i {
-        font-size: 13px;
-    }
-}
