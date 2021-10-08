@@ -67,7 +67,7 @@ function fetchApi(username) {
         document.getElementById("twitter").classList.remove("transparent-info")
       } else {
         document.getElementById("twitter").innerHTML = `Not available`
-        document.getElementById("twitter").style.color='var(--coloricon)'
+        document.getElementById("twitter").style.color = `var(--coloricon)`
         document.getElementById("twitter").classList.add("transparent-info")
         document.getElementById("img-twitter").classList.add("transparent-image")
       }
@@ -77,7 +77,7 @@ function fetchApi(username) {
         document.getElementById("location").classList.remove("transparent-info")
       } else {
         document.getElementById("location").innerHTML = `Not available`
-        document.getElementById("location").style.color='var(--coloricon)'
+        document.getElementById("location").style.color = `var(--coloricon)`
         document.getElementById("location").classList.add("transparent-info")
         document.getElementById("img-location").classList.add("transparent-image")
       }
@@ -88,7 +88,7 @@ function fetchApi(username) {
      } else {
 
         document.getElementById("website").innerHTML = `Not available`
-        document.getElementById("website").style.color='var(--coloricon)'
+        document.getElementById("website").style.color = `var(--coloricon)`
         document.getElementById("website").classList.add("transparent-info")
         document.getElementById("img-website").classList.add("transparent-image")
      }
@@ -100,7 +100,7 @@ function fetchApi(username) {
       
    } else {
       document.getElementById("company").innerHTML = `Not available`
-      document.getElementById("company").style.color='var(--coloricon)'
+      document.getElementById("company").style.color = `var(--coloricon)`
       document.getElementById("company").classList.add("transparent-info")
       document.getElementById("img-company").classList.add("transparent-image")
    }

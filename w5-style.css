@@ -121,7 +121,6 @@ section {
 
 .moon:hover {
     background-color: var(--colorbody);
-    
     color: var(--hovercolor);
     outline: none;
     fill: var(--hovercolor);
@@ -525,7 +524,7 @@ i img {
     }
 
     ::placeholder {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     button {
@@ -623,6 +622,11 @@ i img {
     }
 
     p {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    a {
         font-size: 13px;
         line-height: 19px;
     }
