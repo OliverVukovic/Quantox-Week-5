@@ -18,7 +18,7 @@ url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=sw
     --colordate: #697C9A;
     --colortext: #4B6A9B;
     --colorimg: #4B6A9B  brightness(93%);       /*invert(41%) sepia(8%) saturate(2712%) hue-rotate(178deg) brightness(93%) contrast(86%); */
-    --bckimg: url("./assets/icon-moon.svg");
+    --bckimg: url("./starter-code/assets/icon-moon.svg");
 }
 
 .dark-version {
@@ -38,7 +38,7 @@ url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=sw
     --colordate: #ffffff;
     --colortext: #ffffff;
     --colorimg: brightness(5);
-    --bckimg: url("./assets/icon-sun.svg");
+    --bckimg: url("./starter-code/assets/icon-sun.svg");
 }
 
 
@@ -153,7 +153,7 @@ section {
 input {
     width: 80%;
     height: 70px;
-    background-image: url(./assets/icon-search.svg);
+    background-image: url(./starter-code/assets/icon-search.svg);
     background-repeat: no-repeat;
     background-position: 10px 20px;
     font-size: 18px;
@@ -648,3 +648,4 @@ i img {
         align-content: flex-start;
         align-items: flex-start;
     }
+} 
